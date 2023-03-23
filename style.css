@@ -1,0 +1,288 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --font-padrao:  'Space Grotesk', sans-serif;
+}
+body{
+    width: 100vw;
+    height:100vh ;
+}
+
+*{
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+}
+
+#back-roxo{
+    height: 100vh;
+    width: 400px;
+    background-image: linear-gradient(to right bottom, hsl(278, 68%, 11%), hsl(278, 94%, 30%),  hsl(278, 68%, 11%));
+}
+#cartao-front , #cartao-back{
+    width: 350px;
+    height: 200px;
+
+}
+#container-geral, #container-mes-ano,#container-mes-ano-cvc{
+    display: flex;
+}
+#container-geral{
+    position: absolute;
+    top: 160px;
+}
+#container-form-geral{
+    width: 400px;
+    height: 400px;
+  
+}
+
+input{
+    
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    border: 1px solid rgba(128, 128, 128, 0.389);
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    font-size: 18px;
+ 
+}
+span{
+    font-size: 15px;
+}
+input::placeholder{
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.389);
+    
+}
+input:focus{
+    
+    outline: 1px solid hsl(278, 94%, 30%);
+    
+}
+#input-mes, #input-ano{
+    
+   margin-right: 10px;
+}
+#input-cvc{
+    width: 100%;
+}
+
+.botao{
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+#container-completed{
+    text-align: center;
+    width: 400px;
+    display: none;
+}
+#agradecimento{
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 45px;
+}
+#container-completed >img{
+   margin-bottom: 15px;
+}
+
+#container-cards{
+    
+    width: 750px;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+}
+#cartao-front{
+    position: absolute;
+    top: -50px;
+    left: 120px;
+    z-index: 2;
+}
+#cartao-back{
+    position: absolute;
+    top: 180px;
+    left: 245px;
+}
+#logo{
+    position: absolute;
+    left: 148px;
+    top: -29px;
+    z-index: 3;
+}
+#numero-card{
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    left: 150px;
+    top: 65px;
+    z-index: 3;
+}
+#container-nome-data-card{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 300px;
+    top: 115px;
+    left: 151px;
+    z-index: 3;
+}
+#container-nome-data-card> span{
+    color: hsl(0, 0%, 100%);
+}
+#cvc-card{
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    left: 520px;
+    top: 268px;
+}
+
+.container-form{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#input-nome, #input-number{
+    width: 100%;
+}
+.erro{
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    display: none;
+}
+@media screen and (max-width:1220px){
+    #container-cards{
+        width: 630px;
+    }
+    #container-form-geral{
+        width: 300px;
+    }
+}
+@media screen and (max-width:973px){
+    #container-cards{
+        width: 500px;
+    }
+    #back-roxo{
+        width: 300px;
+    }
+  
+    #cartao-front{
+       
+        left: 59px;
+    }
+    #cartao-back{
+        left: 125px;
+    }
+    #container-nome-data-card{
+        left: 84px;
+    }
+    #numero-card{
+        left: 82px;
+    }
+    #logo{
+        left: 81px;
+    }
+    #cvc-card{
+        left: 405px;
+    }
+   
+}
+@media screen and (max-width:836px){
+    #back-roxo{
+        width: 100vw;
+        height: 300px;
+    }
+    #container-completed{
+        margin-bottom: 30px;
+        width: 300px;
+    }
+    #container-geral{
+        flex-direction: column;
+        top: 0px;
+        align-items: center;
+        position: relative;
+    }
+    #container-cards{
+        height: 150px;
+        width: 300px;
+    }
+    #cartao-front{
+      
+        top: -140px;
+        left: -30px;
+    }
+    #cartao-back{
+        top: -265px;
+        left: 40px;
+    }
+    #logo{
+        top: -112px;
+        left: -4px;
+    }
+    #numero-card{
+        top: -28px;
+        left: 0px;
+    }
+    #container-nome-data-card{
+        top: 25px;
+        left: 1px;
+    }
+    #cvc-card{
+       top: -176px;
+       left: 320px;
+    }
+}
+@media screen and (max-width:508px){
+    #cartao-front, #cartao-back{
+        width: 250px;
+    height: 150px;
+    }
+    
+    #container-cards{
+        height: 100px;
+        
+    }
+    #cartao-front{
+      
+        top: -108px;
+        left: 0px;
+    }
+    #cartao-back{
+        top: -193px;
+        left: 40px;
+    }
+    #logo{
+        width: 60px;
+        top: -93px;
+        left: 11px;
+    }
+    #numero-card{
+        top: -28px;
+    left: 16px;
+        font-size: 18px;
+    }
+    #container-nome-data-card{
+        top: 12px;
+        left: 16px;
+        width: 220px;
+    }
+    #cvc-card{
+        top: -129px;
+        left: 232px;
+    }
+}
+
